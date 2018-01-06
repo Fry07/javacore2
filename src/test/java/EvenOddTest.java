@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -12,6 +13,7 @@ public class EvenOddTest {
         EvenOdd evenOdd = new EvenOdd(number);
         Assert.assertEquals(exRes, evenOdd.even());
     }
+    //@Ignore ("not ready")
     @Test
     public void checkEvenTest2(){
         int number = 1;

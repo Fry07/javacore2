@@ -21,8 +21,10 @@ public class Main {
 //        b1.checkBigger(-1,2);
 //        b1.checkBigger(2,2);
 //        b1.checkBigger(3,2);
+        ArrayDZ a = new ArrayDZ();
+        a.sum();
 
-        menu();
+        //menu();
 
     }
 
