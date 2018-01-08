@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.Random;
-import java.io.Console;
 import java.util.Scanner;
 
 /**
@@ -19,7 +18,6 @@ public class ArrayDZ {
         for (int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
         }
-
         System.out.println();
 
         for (int i = 0; i < array.length; i++){
@@ -36,7 +34,6 @@ public class ArrayDZ {
         for (int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
         }
-
         System.out.println();
 
         for (int i = array.length - 1; i >= 0; i--){
@@ -50,6 +47,7 @@ public class ArrayDZ {
         for (int i = 0; i < array.length; i++){
             array[i] = rnd.nextInt(10);
         }
+
         for (int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
         }
@@ -83,9 +81,11 @@ public class ArrayDZ {
         int[][] array = new int[8][5];
         Random rnd = new Random();
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++)
+        {
             System.out.print("\nLine " + (i+1) + ": ");
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < 5; j++)
+            {
                 array[i][j] = rnd.nextInt(1000);
                 System.out.print("\t" + array[i][j] + "\t");
             }
@@ -93,52 +93,24 @@ public class ArrayDZ {
     }
 
     public void sum(){
-        //Console console = System.console();
-//        int sum = 0;
-//        //String s = console.readLine();
-////        Scanner scanner = new Scanner (System.in);
-////        System.out.print("Enter your name");
-////        String s = null;
-////        s = scanner.next();
-//
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Please enter your name : ");
-//        String s = input.next(); // getting a String value
-//
-////        System.out.println("Please enter your age : ");
-////        int i = input.nextInt(); // getting an integer
-////
-////        System.out.println("Please enter your salary : ");
-////        double d = input.nextDouble(); // getting a double
-////
-////        System.out.println(s + " " + i + " " + d);
-//        String exit = "exit";
-//        if (s == exit)
-//        {
-//            System.out.println("exit");
-//        }
-//        else
-//        {
-//            Integer tmp = Integer.valueOf(s);
-//            System.out.println(tmp*2);
-//        }
-//
-//
-//
-////        while (true) {
-////            //Console console = System.console();
-////            //String s = console.readLine("Enter input:");
-////            s = scanner.next();
-////            if (s == "exit")
-////                break;
-////            else
-////            {
-////                Integer tmp = Integer.valueOf(s);
-////                sum += tmp;
-////            }
-////        }
-//        //int i = Integer.parseInt(console.readLine());
-//        System.out.println("Sum: " + sum);
-//    }
+        int sum = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter numbers (type \"exit\" to sum them):");
+
+        while(true){
+            String s = input.next();
+            if (s.toLowerCase().equals("exit"))
+            {
+                //System.out.println("exit");
+                break;
+            }
+            else
+            {
+                Integer tmp = Integer.valueOf(s);
+                sum += tmp;
+            }
+        }
+        System.out.println("Sum: " + sum);
+    }
 
 }

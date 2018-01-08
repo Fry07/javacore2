@@ -39,42 +39,47 @@ public class Main {
         System.out.println("\nPlease choose a program:\n1 - Right-angle check\n2 - Even or odd check\n3 - Bigger number check\n4 - Exit");
 
         int check = scanner.nextInt();
-        if (check == 1) {
-            System.out.println("Enter 3 sides of triangle\na:");
-            rightTriangle.a = scanner.nextDouble();
-            System.out.println("b:");
-            rightTriangle.b = scanner.nextDouble();
-            System.out.println("c:");
-            rightTriangle.c = scanner.nextDouble();
+        switch (check){
+            case 1: {
+                System.out.println("Enter 3 sides of triangle\na:");
+                rightTriangle.a = scanner.nextDouble();
+                System.out.println("b:");
+                rightTriangle.b = scanner.nextDouble();
+                System.out.println("c:");
+                rightTriangle.c = scanner.nextDouble();
 
-            System.out.println(rightTriangle.check());
+                System.out.println(rightTriangle.check());
 
-            pressAnyKeyToContinue();
-            menu();
-        } else if (check == 2) {
-            System.out.println("Enter number to check if it is even or odd:");
-            evenOdd.number = scanner.nextInt();
+                pressAnyKeyToContinue();
+                menu();
+            }
+            case 2: {
+                System.out.println("Enter number to check if it is even or odd:");
+                evenOdd.number = scanner.nextInt();
 
-            System.out.println(evenOdd.even());
+                System.out.println(evenOdd.even());
 
-            pressAnyKeyToContinue();
-            menu();
-        } else if (check == 3) {
-            System.out.println("Enter 2 numbers to check which is bigger\na:");
-            int a = scanner.nextInt();
-            System.out.println("b:");
-            int b = scanner.nextInt();
+                pressAnyKeyToContinue();
+                menu();
+            }
+            case 3: {
+                System.out.println("Enter 2 numbers to check which is bigger\na:");
+                int a = scanner.nextInt();
+                System.out.println("b:");
+                int b = scanner.nextInt();
 
-            System.out.println(bigger.checkBigger(a, b));
+                System.out.println(bigger.checkBigger(a, b));
 
-            pressAnyKeyToContinue();
-            menu();
-        } else if (check == 4){
-
-        } else{
-            System.out.println("You've entered wrong number. Try again");
-            menu();
+                pressAnyKeyToContinue();
+                menu();
+            }
+            case 4: {break;}
+            default: {
+                System.out.println("You've entered wrong number. Try again");
+                menu();
+            }
         }
+
     }
 
     public static void pressAnyKeyToContinue()
